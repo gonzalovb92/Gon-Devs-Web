@@ -236,8 +236,32 @@ body, html {
     line-height: 1.4;
 }
 
-/* Scroll para el overlay si hay muchos certificados */
+
+
+/* Ajuste específico para el scroll de Certificaciones */
 #certificacionesOverlay {
-    align-items: flex-start;
-    padding-top: 80px;
+    display: none; /* Se activa con la clase .active */
+    overflow-y: auto !important; /* Habilita el scroll vertical */
+    -webkit-overflow-scrolling: touch; /* Suavidad en iPhone/iOS */
+    align-items: flex-start; /* Alinea al inicio para que el scroll empiece arriba */
+    padding-top: 100px; /* Deja espacio para la 'X' de cerrar */
+    padding-bottom: 50px;
+}
+
+#certificacionesOverlay.active {
+    display: flex; /* Solo se muestra cuando haces clic */
+}
+
+/* Forzamos que el contenido dentro de certificaciones permita crecer hacia abajo */
+#certificacionesOverlay .menu-links {
+    height: auto !important;
+    margin-top: 0;
+    padding-bottom: 40px;
+}
+
+/* Ajuste de las fotos de certificados para que no desborden en móvil */
+.cert-img {
+    max-width: 90%; 
+    height: auto;
+    object-fit: contain;
 }
