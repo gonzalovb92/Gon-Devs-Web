@@ -29,9 +29,9 @@
         <span style="color: #444; font-size: 0.8rem; letter-spacing: 0.5em;">EXPERIENCIA</span>
         <a href="javascript:void(0)" onclick="toggleExperiencia(); toggleDetalleExp();">EXPERIENCEIS IT SOLUTIONS</a>
        <a href="javascript:void(0)" onclick="toggleDetalleGlovo(); toggleExperiencia();">GLOVO APP</a>
-        <a href="#">ALCAHOFA DE CANARIAS</a>
-        <a href="#">BOOKSY APP</a>
-        <a href="#">SECURITAS DIRECT</a>
+        <a href="javascript:void(0)" onclick="toggleDetalleAlcachofa(); toggleExperiencia();">ALCAHOFA DE CANARIAS</a>
+        <a href="javascript:void(0)" onclick="toggleDetalleBooksy(); toggleExperiencia();">BOOKSY APP</a>
+        <a href="javascript:void(0)" onclick="toggleDetalleSeguridad(); toggleExperiencia();">SECURITAS DIRECT</a>
         <hr class="menu-divider">
         <a href="javascript:void(0)" onclick="toggleExperiencia(); toggleMenu();" class="contact-link">VOLVER</a>
     </div>
@@ -103,6 +103,44 @@
         <a href="javascript:void(0)" onclick="toggleDetalleGlovo(); toggleExperiencia();" class="contact-link">VOLVER</a>
     </div>
 </div>
+<div id="detalleAlcachofa" class="menu-overlay">
+    <div class="close-icon" onclick="toggleDetalleAlcachofa()">✕</div>
+    <div class="menu-links exp-detail-container">
+        <img src="Alcachofa.png" alt="Logo Alcachofa de Canarias" class="exp-logo-detail">
+        <h2 class="exp-title">Operaciones Comerciales</h2>
+        <p class="exp-subtitle">Alcachofa de Canarias · Jornada completa</p>
+        <p class="exp-date">mayo 2022 - sept. 2022 · 5 meses</p>
+        
+        <div class="exp-description">
+            <p><strong>Arquitectura de procesos:</strong> Diseño y creación del funnel de ventas mediante la implementación técnica de HubSpot CRM.</p>
+            <p><strong>Estrategia de flujo de usuario:</strong> Definición de etapas críticas del proceso comercial para optimizar la tasa de conversión.</p>
+            <p><strong>Gestión del ciclo de vida:</strong> Seguimiento integral de todas las fases del proceso de ventas y cierre de operaciones.</p>
+            <p><strong>Resolución de incidencias:</strong> Soporte técnico y operativo al equipo para garantizar la continuidad del flujo comercial.</p>
+        </div>
+        
+        <hr class="menu-divider">
+        <a href="javascript:void(0)" onclick="toggleDetalleAlcachofa(); toggleExperiencia();" class="contact-link">VOLVER</a>
+    </div>
+</div>
+<div id="detalleBooksy" class="menu-overlay">
+    <div class="close-icon" onclick="toggleDetalleBooksy()">✕</div>
+    <div class="menu-links exp-detail-container">
+        <img src="Boosky.png" alt="Logo Booksy" class="exp-logo-detail">
+        <h2 class="exp-title">Sales Operations</h2>
+        <p class="exp-subtitle">Booksy · Jornada completa</p>
+        <p class="exp-date">sept. 2021 - mayo 2022 · 9 meses</p>
+        
+        <div class="exp-description">
+            <p><strong>Implementación de Software:</strong> Instalación y configuración técnica de soluciones de gestión para clientes B2B.</p>
+            <p><strong>Soporte y Capacitación:</strong> Formación técnica a usuarios finales, garantizando la correcta adopción de la plataforma.</p>
+            <p><strong>Análisis de Requerimientos:</strong> Identificación de necesidades del usuario para optimizar su flujo de trabajo con la herramienta.</p>
+            <p><strong>Optimización mediante CRM:</strong> Gestión y seguimiento de KPIs operativos para asegurar la eficiencia del servicio.</p>
+        </div>
+        
+        <hr class="menu-divider">
+        <a href="javascript:void(0)" onclick="toggleDetalleBooksy(); toggleExperiencia();" class="contact-link">VOLVER</a>
+    </div>
+</div>
     <nav class="navbar-custom">
         <div class="menu-icon" onclick="toggleMenu()">
             <span></span>
@@ -148,6 +186,14 @@ function toggleDetalleGlovo() {
 function toggleCertificaciones() {
     const cert = document.getElementById('certificacionesOverlay');
     cert.classList.toggle('active');
+}
+function toggleDetalleAlcachofa() {
+    const detalle = document.getElementById('detalleAlcachofa');
+    detalle.classList.toggle('active');
+}
+function toggleDetalleBooksy() {
+    const detalle = document.getElementById('detalleBooksy');
+    detalle.classList.toggle('active');
 }
     </script>
 </body>
