@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonzalo Valencia | Desarrollador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="menuOverlay" class="menu-overlay">
+        <div class="close-icon" onclick="toggleMenu()">✕</div>
+        <div class="menu-links">
+            <a href="#proyectos" onclick="toggleMenu()">PROYECTOS</a>
+            <a href="#skills" onclick="toggleMenu()">SKILLS</a>
+            <a href="javascript:void(0)" onclick="toggleMenu(); toggleExperiencia();">EXPERIENCIA</a>
+            <a href="javascript:void(0)" onclick="toggleMenu(); toggleCertificaciones();">CERTIFICACIONES</a>
+            <a href="#metodologias" onclick="toggleMenu()">METODOLOGÍAS</a>
+            <a href="#sobre-mi" onclick="toggleMenu()">SOBRE MÍ</a>
+            <hr class="menu-divider">
+            <a href="#contacto" class="contact-link" onclick="toggleMenu()">CONTACTO</a>
+        </div>
+    </div>
+    <div id="experienciaOverlay" class="menu-overlay">
+    <div class="close-icon" onclick="toggleExperiencia()">✕</div>
+    <div class="menu-links">
+        <span style="color: #444; font-size: 0.8rem; letter-spacing: 0.5em;">EXPERIENCIA</span>
+        <a href="javascript:void(0)" onclick="toggleExperiencia(); toggleDetalleExp();">EXPERIENCEIS IT SOLUTIONS</a>
+       <a href="javascript:void(0)" onclick="toggleDetalleGlovo(); toggleExperiencia();">GLOVO APP</a>
+        <a href="#">ALCAHOFA DE CANARIAS</a>
+        <a href="#">BOOKSY APP</a>
+        <a href="#">SECURITAS DIRECT</a>
+        <hr class="menu-divider">
+        <a href="javascript:void(0)" onclick="toggleExperiencia(); toggleMenu();" class="contact-link">VOLVER</a>
+    </div>
+    </div> 
+    <div id="certificacionesOverlay" class="menu-overlay">
+    <div class="close-icon" onclick="toggleCertificaciones()">✕</div>
+    <div class="menu-links cert-container">
+        <span style="color: #444; font-size: 0.8rem; letter-spacing: 0.5em; margin-bottom: 30px; display: block;">CERTIFICACIONES</span>
+        
+        <div class="cert-grid">
+            <div class="cert-item">
+                <img src="Certificado JS Meta.png" alt="Certificado JS" class="cert-img">
+                <a href="https://www.coursera.org/account/accomplishments/verify/9BWR249EK85Y" target="_blank" class="cert-name">Programming with JavaScript</a>
+            </div>
+
+            <div class="cert-item">
+                <img src="Adaptación IA Organización.png" alt="Certificado IA" class="cert-img">
+                <a href="https://learn.microsoft.com/es-es/users/gonzalovalenciablanco-2868/achievements/zbtepyh2?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" class="cert-name">Adaptación de la IA a la organización</a>
+            </div>
+            <div class="cert-item">
+        <img src="Frontend Meta.png" alt="Certificado Front End" class="cert-img">
+        <a href="https://www.coursera.org/account/accomplishments/verify/HJBP2XZ037O0" target="_blank" class="cert-name">Front End Development</a>
+    </div>
+    <div class="cert-item">
+    <img src="msprompt.png" alt="Certificado Prompt Engineering" class="cert-img">
+    <a href="https://learn.founderz.com/certificate/curso-online-introduccion-a-la-ia-y-prompt-engineering/b38d7acd-5164-4a99-97c6-ba5176307039" target="_blank" class="cert-name">IA Intro & Prompt Engineering</a>
+</div>
+        </div>
+
+        <hr class="menu-divider">
+        <a href="javascript:void(0)" onclick="toggleCertificaciones(); toggleMenu();" class="contact-link">VOLVER</a>
+    </div>
+</div>
+    <div id="detalleExperience" class="menu-overlay">
+    <div class="close-icon" onclick="toggleDetalleExp()">✕</div>
+    <div class="menu-links exp-detail-container">
+        <img src="Experience Logo.jpeg" alt="Logo Experience" class="exp-logo-detail">
+        <h2 class="exp-title">Operations & Data Assurance</h2>
+        <p class="exp-subtitle">eXperience IT Solutions · Jornada completa</p>
+        <p class="exp-date">sept. 2024 - ene. 2026 · 1 año 5 meses</p>
+        
+        <div class="exp-description">
+            <p><strong>Data Assurance:</strong> Aseguramiento de la calidad del dato, garantizando precisión y consistencia.</p>
+            <p>Administración de bases de datos mediante <strong>SQL (DBeaver)</strong> para informes operativos.</p>
+            <p>Mantenimiento de dashboards técnicos en <strong>Qlik y Excel</strong> enfocados en KPIs.</p>
+            <p>Configuración técnica en <strong>Salesforce</strong> y sistemas de telefonía (Genesys).</p>
+        </div>
+        
+        <hr class="menu-divider">
+        <a href="javascript:void(0)" onclick="toggleDetalleExp(); toggleExperiencia();" class="contact-link">VOLVER</a>
+    </div>
+    </div>
+    <div id="detalleGlovo" class="menu-overlay">
+    <div class="close-icon" onclick="toggleDetalleGlovo()">✕</div>
+    <div class="menu-links exp-detail-container">
+        <img src="Logo Globo.png" alt="Logo Glovo" class="exp-logo-detail">
+        <h2 class="exp-title">Supply Operations Analyst</h2>
+        <p class="exp-subtitle">Glovo · Jornada completa</p>
+        <p class="exp-date">sept. 2022 - ago. 2024 · 2 años</p>
+        
+        <div class="exp-description">
+            <p><strong>Gestión escalable:</strong> Coordinación operativa y logística de flotas en 15 ciudades, incluyendo mercados complejos como Canarias, Ceuta y Melilla.</p>
+            <p><strong>Análisis de datos operativos:</strong> Optimización de la cadena de suministro basada en métricas de rendimiento y eficiencia en tiempo real.</p>
+            <p><strong>Planificación predictiva:</strong> Modelado de demanda y recursos para asegurar la estabilidad del servicio a gran escala.</p>
+            <p><strong>Monitoreo de KPIs:</strong> Reporte de indicadores clave y detección de anomalías para la optimización continua de procesos.</p>
+        </div>
+        
+        <hr class="menu-divider">
+        <a href="javascript:void(0)" onclick="toggleDetalleGlovo(); toggleExperiencia();" class="contact-link">VOLVER</a>
+    </div>
+</div>
+    <nav class="navbar-custom">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="display-name">Gon Devs</h1><br>
+            <h3 class="display-subname">   Full Stack Developer <br>& Spec-driven development </h3>
+            
+            <div class="icon-stack">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js" title="JavaScript"></i>
+                <i class="fab fa-react" title="React"></i>
+                <i class="fab fa-github" title="GitHub"></i>
+            </div>
+        </div>
+
+        <div class="side-text right">BOOKING</div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const overlay = document.getElementById('menuOverlay');
+            overlay.classList.toggle('active');
+        }
+        function toggleExperiencia() {
+    const exp = document.getElementById('experienciaOverlay');
+    exp.classList.toggle('active');
+}
+function toggleDetalleExp() {
+    const detalle = document.getElementById('detalleExperience');
+    detalle.classList.toggle('active');
+}
+function toggleDetalleGlovo() {
+    const detalle = document.getElementById('detalleGlovo'); // Revisa que el ID coincida con el HTML
+    detalle.classList.toggle('active');
+}
+function toggleCertificaciones() {
+    const cert = document.getElementById('certificacionesOverlay');
+    cert.classList.toggle('active');
+}
+    </script>
+</body>
+</html>

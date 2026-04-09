@@ -1,0 +1,243 @@
+/* RESET Y FUENTES */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body, html {
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* PORTADA PRINCIPAL */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            url('Gon\ devs\ bn\ abuelo.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.display-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 9vw;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-align: center;
+}
+.display-subname {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-align: center;
+}
+
+.icon-stack {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.icon-stack i {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 0.3s;
+}
+
+.icon-stack i:hover { color: #fff; transform: scale(1.2); }
+
+/* MENÚ DE TRES LÍNEAS */
+.navbar-custom {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.menu-icon { display: flex; flex-direction: column; gap: 6px; cursor: pointer; }
+.menu-icon span { width: 35px; height: 1px; background-color: #fff; transition: 0.3s; }
+
+/* MENÚ OVERLAY (PANTALLA COMPLETA) */
+.menu-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(10, 10, 10, 0.98);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.menu-overlay.active { opacity: 1; pointer-events: auto; }
+
+.menu-links { text-align: center; }
+
+.menu-links a {
+    display: block;
+    /* clamp(mínimo, preferido, máximo) */
+    font-size: clamp(1.8rem, 6vw, 3.5rem); 
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    opacity: 0.7;
+    white-space: nowrap; /* Evita que las palabras se partan en dos líneas */
+
+}
+
+
+.menu-links a:hover { opacity: 1; letter-spacing: 0.2em; }
+
+.menu-divider { border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 30px auto; width: 50px; }
+
+.contact-link { color: #888 !important; font-size: 1.5rem !important; }
+
+.close-icon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+/* TEXTOS LATERALES */
+.side-text {
+    position: absolute;
+    bottom: 50px;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: rgba(255,255,255,0.3);
+}
+.right { right: 50px; }
+
+/* Ajuste para que los nombres de empresas quepan bien en pantalla */
+#experienciaOverlay .menu-links a {
+    font-size: clamp(1.1rem, 3.5vw, 2rem);
+    margin: 15px 0;
+}
+
+/* Color de fondo ligeramente distinto para saber que hemos "entrado" en una sección */
+#experienciaOverlay {
+    background: rgba(15, 15, 15, 0.98);
+}
+/* Contenedor de detalles de experiencia */
+.exp-detail-container {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left !important; /* Alineación a la izquierda para lectura */
+}
+
+.exp-logo-detail {
+    width: 120px;          
+    height: auto;
+    display: block;        /* Esto es vital para que el margin auto funcione */
+    margin-left: auto !important;  
+    margin-right: auto !important; 
+    margin-bottom: 25px;
+    filter: grayscale(1) invert(1); /* Para que el logo blanco/negro encaje con tu web */
+}
+
+.exp-title { font-size: 1.8rem; margin-bottom: 5px; }
+.exp-subtitle { color: #888; font-size: 1rem; }
+.exp-date { color: #555; font-size: 0.9rem; margin-bottom: 25px; }
+
+.exp-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ccc;
+    opacity: 1 !important; /* Que sea totalmente legible */
+}
+
+/* Ajuste para que el scroll funcione si el texto es largo en móviles */
+#detalleExperience {
+    overflow-y: auto;
+    display: block; /* Cambiamos flex por block para permitir scroll natural */
+    padding-top: 100px;
+}
+
+#detalleExperience .menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}/* Esto asegura que los detalles siempre salgan por encima de todo */
+#detalleExperience, #detalleGlovo {
+    z-index: 3000 !important; 
+    background: rgba(0, 0, 0, 0.98); /* Fondo opaco para que no se trasparente el nombre */
+    display: none; /* Por defecto oculto */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cuando tienen la clase active, se muestran */
+#detalleExperience.active, #detalleGlovo.active {
+    display: flex;
+}
+/* Contenedor principal de certificados */
+.cert-container {
+    max-width: 900px;
+    width: 95%;
+    overflow-y: auto;
+    padding: 40px 10px;
+}
+
+/* Rejilla para mostrar certificados */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.cert-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cert-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #333;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.cert-img:hover {
+    transform: scale(1.05);
+}
+
+.cert-name {
+    font-size: 1rem !important;
+    color: #fff !important;
+    text-decoration: underline !important;
+    opacity: 1 !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.4;
+}
+
+/* Scroll para el overlay si hay muchos certificados */
+#certificacionesOverlay {
+    align-items: flex-start;
+    padding-top: 80px;
+}
