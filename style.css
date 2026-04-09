@@ -265,3 +265,25 @@ body, html {
     height: auto;
     object-fit: contain;
 }
+#detalleAlcachofa {
+    z-index: 3000;
+    overflow-y: auto !important;
+    display: none; 
+    align-items: flex-start; /* Para que el scroll empiece arriba */
+    padding-top: 80px;
+}
+
+#detalleAlcachofa.active {
+    display: flex;
+}
+#detalleBooksy {
+    z-index: 3000;
+    overflow-y: auto !important;
+    display: none; 
+    align-items: flex-start;
+    padding-top: 80px;
+}
+
+#detalleBooksy.active {
+    display: flex;
+}
